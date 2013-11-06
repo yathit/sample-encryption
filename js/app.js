@@ -20,14 +20,14 @@ function loadDb() {
   var passphase2 = document.getElementById('passphase2').value;
   if (key1 && passphase1) {
     secrets.push({
-      key: key1,
-      passphase: passphase1
+      name: key1,
+      key: passphase1
     });
   }
   if (key2 && passphase2) {
     secrets.push({
-      key: key2,
-      passphase: passphase2
+      name: key2,
+      key: passphase2
     });
   }
   var options = {
