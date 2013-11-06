@@ -2,41 +2,54 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <style>
+        .box {
+            margin: 8px;
+        }
+    </style>
     <title>Sample-encryption by yathit</title>
+    <script type="text/javascript" src="js/ydn.db-isw-core-crypt-qry-dev.js"></script>
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
   </head>
   <body>
-    <div class="wrapper">
-      <header>
-        <h1>Sample-encryption</h1>
-        <p>YDN-DB encryption example application</p>
-
-        <p class="view"><a href="https://github.com/yathit/sample-encryption">View the Project on GitHub <small>yathit/sample-encryption</small></a></p>
-
-
-        <ul>
-          <li><a href="https://github.com/yathit/sample-encryption/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/yathit/sample-encryption/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/yathit/sample-encryption">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <h3>
-<a name="ydn-db-encryption-sample-application" class="anchor" href="#ydn-db-encryption-sample-application"><span class="octicon octicon-link"></span></a>YDN-DB encryption sample application</h3>
-      </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/yathit">yathit</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
+    <h2>YDN-DB encryption sample application</h2>
+    <div class="box">
+        <div>Key-secret pair 1 (current key pair)</div>
+        <label for="passphase1">Passphase</label>
+        <input id="passphase1" name="passphase1" value="monkey" type="text"/>
+        <label for="key1">Passphase</label>
+        <input id="key1" name="key1" value="aaaa" type="text"/>
     </div>
-    <script src="javascripts/scale.fix.js"></script>
-    
+    <div class="box">
+        <div>Key-secret pair 2 (previous key pair)</div>
+        <label for="passphase2">Passphase</label>
+        <input id="passphase2" id="passphase2" value="" type="text"/>
+        <label for="key2">Passphase</label>
+        <input id="key2" id="key2" value="" type="text"/>
+    </div>
+    <button onclick="loadDb();">Initialize database.</button>
+    <div class="box">
+        <label for="id">Record id</label>
+        <input id="id" name="id" value="" type="text"/>
+        <label for="value">Record value</label>
+        <input id="value" name="value" value="" type="text"/>
+        <div>
+            <button id="add" onclick="addRecord()">Add</button>
+        </div>
+    </div>
+    <div class="box">
+        <label for="get-id">Get record</label>
+        <input id="get-id" name="get-id" value="" type="text"/>
+
+        <div>
+            <button onclick="getRecord()">Get</button>
+        </div>
+    </div>
+    <div id="listing"></div>
+    <div>
+        <button id="clear" onclick="clear()">Clear</button>
+    </div>
+    <div id="msg">No ready</div>
+    <script type="text/javascript" src="js/app.js"></script>
   </body>
 </html>
