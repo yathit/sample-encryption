@@ -49,12 +49,12 @@ function status(msg) {
 function showAll() {
   db.keys('st').done(function(keys) {
     db.values('st').done(function(values) {
-      var html = '<ul>';
+      var html = '<ol>';
       for (var i = 0; i < keys.length; i++) {
-        html += '<li><detail><summary>' + keys[i] + '</summary>' +
-            JSON.stringify(values[i]) + '</detail></li>';
+        html += '<li><details><summary>' + keys[i] + '</summary>' +
+            JSON.stringify(values[i]) + '</details></li>';
       }
-      document.getElementById('listing').innerHTML = html;
+      document.getElementById('listing').innerHTML = html + '</ol>';
     });
   });
 }

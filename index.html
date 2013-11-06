@@ -14,18 +14,18 @@
   <body>
     <h2>YDN-DB encryption sample application</h2>
     <div class="box">
-        <div>Key-secret pair 1 (current key pair)</div>
-        <label for="passphase1">Passphase</label>
-        <input id="passphase1" name="passphase1" value="monkey" type="text"/>
-        <label for="key1">Passphase</label>
+        <div>Key-secret pair 1</div>
+        <label for="key1">Name</label>
         <input id="key1" name="key1" value="aaaa" type="text"/>
+        <label for="passphase1">Key</label>
+        <input id="passphase1" name="passphase1" value="monkey" type="text"/>
     </div>
     <div class="box" style="display: none">
-        <div>Key-secret pair 2 (previous key pair)</div>
-        <label for="passphase2">Passphase</label>
-        <input id="passphase2" id="passphase2" value="" type="text"/>
-        <label for="key2">Passphase</label>
+        <div>Key-secret pair 2</div>
+        <label for="key2">Name</label>
         <input id="key2" id="key2" value="" type="text"/>
+        <label for="passphase2">Key</label>
+        <input id="passphase2" id="passphase2" value="" type="text"/>
     </div>
     <button onclick="loadDb();">Initialize database.</button>
     <div class="box">
