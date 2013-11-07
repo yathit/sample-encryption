@@ -46,12 +46,26 @@
             <button onclick="getRecord()">Get</button>
         </div>
     </div>
+    <div>
+        <h4>Results</h4>
     <div id="listing"></div>
+    </div>
     <div>
         <button id="clear" onclick="dbClear()">Clear</button>
     </div>
     </div>
     <div id="msg">No ready</div>
+    <p>Instruction:   </p>
+        <ol>
+        <li>Initialize the database by giving cipher key</li>
+        <li>Add some records by giving record key and record value</li>
+        <li>Check out records store in the database in the results panel</li>
+        <li>Retrieve record by giving record key</li>
+        <li>Re initialize the database by giving different cipher key</li>
+        <li>Retrieve record by giving record key</li>
+        <li>When finished, clear the database.</li>
+        </ol>
+
     <p>Demo application for <a href="http://dev.yathit.com">YDN-DB database library</a>.
     See <a href="http://dev.yathit.com/ydn-db/using/encryption.html">encryption</a> article for details.</p>
     <script type="text/javascript" src="js/app.js"></script>
