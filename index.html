@@ -28,6 +28,7 @@
         <input id="passphase2" id="passphase2" value="" type="text"/>
     </div>
     <button onclick="loadDb();">Initialize database.</button>
+    <div id="workspace" style="display: none;">
     <div class="box">
         <label for="id">Record id</label>
         <input id="id" name="id" value="" type="text"/>
@@ -47,7 +48,8 @@
     </div>
     <div id="listing"></div>
     <div>
-        <button id="clear" onclick="clear()">Clear</button>
+        <button id="clear" onclick="dbClear()">Clear</button>
+    </div>
     </div>
     <div id="msg">No ready</div>
     <p>Demo application for <a href="http://dev.yathit.com">YDN-DB database library</a>.

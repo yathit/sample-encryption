@@ -38,6 +38,7 @@ function loadDb() {
   db = new ydn.db.Storage(db_name, schema, options);
   db.onReady(function() {
     status('db ' + db_name + ' ready');
+    document.getElementById('workspace').style.display = '';
     showAll();
   });
 }
@@ -91,7 +92,7 @@ function getRecord() {
 
 }
 
-function clear() {
+function dbClear() {
   db.clear('st').done(function() {
     status('cleared');
     showAll();
